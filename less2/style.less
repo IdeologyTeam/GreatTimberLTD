@@ -14,6 +14,13 @@
 @baseShadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 @baseBorderRadius: 10px;
 
+.mixin-flex(@flex:flex, @direction:row, @center:center, @space:space-evenly) {/*MIXIN-flex*/
+    display: @flex;
+    flex-direction: @direction;
+	justify-content: @space;
+	align-items:@center;
+}
+
 // Main font style
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -111,7 +118,13 @@ body {
 .why-choose {
     width: 100%;
     height: 420px;
-    background-color: lightgrey;
+    background-color: #F5F5F5;
+    
+}
+.flex {
+    width: 100%;
+    height: 75%;
+    .mixin-flex(flex, row, center, space-evenly);
 }
 .box-h1 { /*блок для вирівнювання заголовку*/
     width: 25%;
@@ -126,12 +139,49 @@ body {
     
 
 }
+
 .h1__green {
     color:@mainColor;
+    font-size: 34px;
 }
 .green-line {
     width: 60px;
     height: 5px;
     background-color: @mainColor;
     border-radius: 10px;
+}
+
+.why-choose__content {
+    width: 45%;
+    height: 100%;
+    margin-left: 2px;
+    margin-top: 15px;
+    .mixin-flex(flex, row, center, space-evenly);
+}
+.why__image {
+    width: 45%;
+    height: 80%;
+}
+.content__text {
+    width: 45%;
+    height: 80%;
+    .mixin-flex(flex, column, flex-start, space-between);
+    h2 {
+        font-size: 24px;
+        color:@baseHeadingColor;
+    }
+    p {
+        font-size: 20px;
+        color:@baseTextColor;
+    }
+}
+.green_button {
+    width: 165px;
+    height: 40px;
+    background-color: @mainColor;
+    border-radius: 10px;
+    font-weight: medium;
+    font-size: 20px;
+    color:@baseColor;
+    .mixin-flex(flex, row, center, space-evenly);
 }
