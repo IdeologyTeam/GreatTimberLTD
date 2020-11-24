@@ -122,7 +122,7 @@ body {
     height: 65px;
     .mixin-flex(flex, column, space-evenly);
    
-    position: relative;//по іншому не вирівнювалось
+    position: relative;//?по іншому не вирівнювалось
     top:20px;
      margin-left: 5%;
 }
@@ -148,7 +148,7 @@ body {
     .mixin-flex(flex, column, center, center);
    margin-top: -25px;
 }
-.flex__baner-p {
+.flex__baner-p {//?поправка тексту
     width: 90%;
 font-size: 24px;
 text-align: justify;
@@ -156,7 +156,7 @@ text-align: justify;
 .flex__box4 {
     width: 100%;
     height: 70%;
-    .mixin-flex(flex, row, center, center);//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    .mixin-flex(flex, row, center, center);
     flex-wrap: wrap;
 }
 .box4__box {
@@ -166,7 +166,6 @@ text-align: justify;
     .mixin-flex(flex, column, flex-start, space-around);
     img {
         width: 580px;
-        // height: 197px;
     }
  
 }
@@ -174,10 +173,10 @@ text-align: justify;
     .box4__box;
     .mixin-flex(flex, column, flex-end, space-around);
 }
-.align-p { //Правильне вирівнювання тексту
+.align-p { //?Правильне вирівнювання тексту
     width: 100%;
-    height: 50%;
-    
+    height: 60%;
+    margin-top: 15px;
     .mixin-flex(flex, column, flex-start, space-evenly);
     h2 {
         font-size: 24px;
@@ -187,7 +186,7 @@ text-align: justify;
          width: 100%;
      }
 }
-.align-p2 { //Правильне вирівнювання тексту
+.align-p2 { //?Правильне вирівнювання тексту
     .align-p;
     padding-left: 25px;
 }
