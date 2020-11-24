@@ -125,6 +125,8 @@ body {
   width: 90%;
   font-size: 24px;
   text-align: justify;
+  position: relative;
+  top: -10px;
 }
 .flex__box4 {
   width: 100%;
