@@ -129,7 +129,6 @@ body {
     position: relative;//по іншому не вирівнювалось
     top:20px;
      margin-left: 5%;
-     background-color: purple;
 }
 
 .h1__green {
@@ -142,17 +141,26 @@ body {
     background-color: @mainColor;
     border-radius: 10px;
 }
+.green-line {
+    width: 60px;
+    height: 5px;
+    background-color: @mainColor;
+    border-radius: 10px;
+}
+.green-line2 {
+    .green-line;
+    margin-left: 114px;
+}
 .lol {
     width: 100%;
     height: 80%;
-    background-color: green;
+
     display: flex;
 }
 .contact__flex-form {
     width: 800px;
     height: 75%;
     margin-top: 50px;
-    background-color: red;
     .mixin-flex(flex, row, center,space-evenly);
     flex-wrap: wrap;
     margin-left: 52px;
@@ -187,5 +195,4 @@ body {
     width: 440px;
     height: 80%;
     margin-top: 50px;
-    background-color: blue;
 }
