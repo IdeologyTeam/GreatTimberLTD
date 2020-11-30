@@ -36,6 +36,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    max-width: 1400px;
+    margin:0 auto;
 }
 
 // Header
@@ -45,10 +47,7 @@ body {
     padding: 20px 70px;
     background-color: @baseColor;
     color: @baseTextColor;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: center;
+    .mixin-flex(flex, row, center, space-between);
 
 }
 
@@ -63,10 +62,9 @@ body {
 // Menu
 .menu {
     width: 500px;
-    display: grid;
+    .mixin-flex(flex, row, center, space-between);
     grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
+   
 }
 
 .menu-item {
@@ -122,17 +120,14 @@ body {
     
 }
 .flex {
-    width: 100%;
+    width: 1355px;
     height: 75%;
     .mixin-flex(flex, row, center, space-evenly);
 }
 .box-h1 { /*блок для вирівнювання заголовку*/
-    width: 25%;
+    width: 300px;
     height: 65px;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    .mixin-flex(flex, column,space-evenly);
     position: relative;//по іншому не вирівнювалось
     top:20px;
      margin-left: 5%;

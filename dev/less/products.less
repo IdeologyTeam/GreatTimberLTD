@@ -35,6 +35,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 // Header
@@ -44,10 +47,7 @@ body {
     padding: 20px 70px;
     background-color: @baseColor;
     color: @baseTextColor;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: center;
+    .mixin-flex(flex, row, center, space-between);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
@@ -63,10 +63,8 @@ body {
 // Menu
 .menu {
     width: 500px;
-    display: grid;
+    .mixin-flex(flex, row, center, space-between);
     grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .menu-item {
@@ -141,14 +139,12 @@ body {
     height: 1131px;
 }
 .our-timbers__flex {
-    width: 93%;
+    width: 1260px;
     height: 87%;
     margin-top: 50px;
     margin-left: 42px;
-    display: flex;
+    .mixin-flex(flex, row, space-evenly);
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    
 }
 
 .img-box1 {
@@ -225,7 +221,7 @@ body {
     background-color: #F5F5F5;
 }
 .flex {
-    width: 100%;
+    width: 1330px;
     height:100%;
     .mixin-flex(flex, column, center, center);
    margin-top: -25px;
@@ -236,6 +232,7 @@ font-size: 24px;
 text-align: justify;
 position: relative;//?по іншому не вирівнювалось
 top:-10px;
+color:baseTextColor;
 }
 .flex__box4 {
     width: 100%;
