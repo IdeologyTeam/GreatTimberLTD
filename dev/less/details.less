@@ -121,7 +121,7 @@ body {
 .flex {
     width: 1349px;
     height: 85%;
-    // background-color: red;
+    .mixin-flex(flex, row,space-evenly);
     margin-top: 30px;
 }
 .box-h1 { /*блок для вирівнювання заголовку*/
@@ -145,8 +145,7 @@ body {
 .fotos {
     width: 43%;
     height: 85%;
-    // background-color: lightblue;
-    margin-left: 59px;
+   margin-left: 15px;
     .mixin-flex(flex, column,center,space-evenly);
     hr {
         width: 568px;
@@ -191,4 +190,109 @@ img {
     background-image: url(../img/details__image-small.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.line {
+    height: 650px;
+    border: 1px solid #4F4F4F;
+    margin-top: 0px;
+}
+
+.describe {
+    width: 42.4%;
+    height: 85%;
+}
+.describe__name-box {
+    width: 100%;
+    height: 75px;
+    .mixin-flex(flex, row,center,space-between);
+    h2 {
+        font-size: 28px;
+        color:@baseHeadingColor;
+    }
+}
+.name-box__icon {
+    width: 60px;
+height: 60px;
+border-radius: @baseBorderRadius;
+background-color: @mainColor;
+.mixin-flex(flex, row,center,center);
+}
+.describe__quality {
+    width: 100%;
+    height: 40px;
+    border-top:2px solid  #4F4F4F;; 
+    border-bottom:2px solid  #4F4F4F;; 
+    .mixin-flex(flex, row,center,space-between);
+    h2 {
+        font-size: 22px;
+        color:@baseHeadingColor;
+    }
+    p {
+        font-size: 21px;
+        color:@mainColor;
+    }
+}
+.quality__flex {
+    width: 41%;
+    .mixin-flex(flex, row,center,space-between);
+}
+.quality__flex2 {
+    width: 20%;
+    .mixin-flex(flex, row,center,space-between);
+    margin-right: 1px;
+}
+.describe__main {
+    width: 100%;
+    height: 280px;
+    .mixin-flex(flex, column,flex-start,space-evenly);
+    border-bottom:2px solid #4F4F4F;;
+    hr{
+        width: 30px;
+        border: 1px solid @baseHeadingColor;
+
+    }
+    h3 {
+        font-size: 24px;
+        color:@baseHeadingColor;
+    }
+    p {
+        width: 95%;
+        font-size: 20px;
+        color:@baseTextColor;
+
+    }
+    .main__flex {
+        width: 34%;
+        .mixin-flex(flex, row,center,space-between);
+        margin-right: 1px;
+    }
+}
+.describe__count {
+    width: 100%;
+    height: 80px;
+    .mixin-flex(flex, row,center,flex-start);
+    color:@baseHeadingColor;
+    margin-top: 10px;
+    .count__how-many{
+        width: 103px;
+        height: 45px;
+        border: 1px solid @baseHeadingColor;
+        border-radius: 5px;
+        font-size: 28px;
+        margin-left: 20px;
+        .mixin-flex(flex, row,center,space-around);
+        
+    }
+   
+}
+.buy__button {
+    width: 130px;
+    height: 50px;
+    background-color: @mainColor;
+    border-radius: 5px;
+    font-size: 28px;
+    color:@baseColor;
+    .mixin-flex(flex, row,center,space-evenly);
+    margin-top: 45px;
 }
