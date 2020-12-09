@@ -1,0 +1,274 @@
+// Basic style variables
+// Color scheme
+@baseTextColor: #4E4E4E;
+@baseHeadingColor: #3F3F3F;
+@baseColor: #ffffff;
+
+@mainColor: #72AC6B;
+
+@activeButtonColor: #2C6D24;
+@dividerLinesColor: #A4A4A4;
+
+// Other base styles
+@baseShadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+@baseBorderRadius: 10px;
+
+.mixin-flex(@flex:flex, @direction:row, @center:center, @space:space-evenly) {/*MIXIN-flex*/
+    display: @flex;
+    flex-direction: @direction;
+	justify-content: @space;
+	align-items:@center;
+}
+
+// Main font style
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+// Basic styles to all elements
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// Header
+.header {
+    height: 95px;
+    width: 100%;
+    padding: 20px 70px;
+    background-color: @baseColor;
+    color: @baseTextColor;
+    .mixin-flex(flex, row, center, space-between);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.logo {
+    width: 270px;
+
+    img {
+        width: 100%;
+    }
+}
+
+// Menu
+.menu {
+    width: 500px;
+    .mixin-flex(flex, row, center, space-between);
+    grid-auto-flow: column;
+}
+
+.menu-item {
+    border-radius: 999px;
+    text-decoration: none;
+    color: @baseTextColor;
+    display: block;
+
+    &-active {
+        padding: 7px 15px;
+        background-color: @mainColor;
+        text-decoration: none;
+        color: @baseColor;
+        box-shadow: @baseShadow;
+    }
+}
+
+// Header contacts
+.header-contact-row {
+    margin-bottom: 5px;
+    font-size: 22px;
+
+    i {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    span {
+        transition-duration: 0.4s;
+
+        &:hover {
+            background-color: lightgray;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.header-contacts-divider {
+    width: 220px;
+    height: 1px;
+    background-color: @baseTextColor;
+}
+
+.header-contact-row:last-child {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+
+.box-h1 { /*блок для вирівнювання заголовку*/
+    width: 60%;
+    height: 65px;
+    .mixin-flex(flex, column, space-evenly);
+    position: relative;//?по іншому не вирівнювалось
+    top:20px;
+     margin-left: 5%;
+}
+
+.h1__green {
+    color:@mainColor;
+    font-size: 34px;
+}
+.green-line {
+    width: 60px;
+    height: 5px;
+    background-color: @mainColor;
+    border-radius: @baseBorderRadius;
+}
+.our-timbers {
+    width: 100%;
+    height: 1131px;
+}
+.our-timbers__flex {
+    width: 1260px;
+    height: 87%;
+    margin-top: 50px;
+    margin-left: 42px;
+    .mixin-flex(flex, row, space-evenly);
+    flex-wrap: wrap;
+}
+
+.img-box1 {
+    width: 242px;
+    height: 312px;
+    background-image: url(../img/timbers1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: @baseBorderRadius;
+    font-size: 34px;
+    color:@baseColor;
+    text-align: center;
+    .mixin-flex(flex, row, center,center);
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.img-box2 {
+    width: 560px;
+    height: 312px;
+    background-image: url(../img/timbers2.png);
+    border-radius: @baseBorderRadius;
+    font-size: 34px;
+    color:@baseColor;
+    text-align: center;
+    .mixin-flex(flex, row, center,center);
+     img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.img-box3 {
+    width: 378px;
+    height: 312px;
+    background-image: url(../img/timbers3.png);
+    border-radius: @baseBorderRadius;
+        font-size: 34px;
+        color:@baseColor;
+        text-align: center;
+        .mixin-flex(flex, row, center,center);
+     img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.img-box4 {
+   .img-box3;
+   background-image: url(../img/timbers4.png);
+}
+.img-box5 {
+    .img-box2;
+    background-image: url(../img/timbers5.png);
+}
+.img-box6 {
+    .img-box1;
+    background-image: url(../img/timbers6.png);
+}
+.img-box7 {
+    .img-box1;
+    background-image: url(../img/timbers7.png);
+}
+.img-box8 {
+    .img-box3;
+    background-image: url(../img/timbers8.png);
+}
+.img-box9 {
+    .img-box2;
+    background-image: url(../img/timbers9.png);
+}
+.if-we {
+    width: 100%;
+    height: 900px;
+    background-color: #F5F5F5;
+}
+.flex {
+    width: 1330px;
+    height:100%;
+    .mixin-flex(flex, column, center, center);
+   margin-top: -25px;
+}
+.flex__baner-p {//?поправка тексту
+    width: 90%;
+font-size: 24px;
+text-align: justify;
+position: relative;//?по іншому не вирівнювалось
+top:-10px;
+color:baseTextColor;
+}
+.flex__box4 {
+    width: 100%;
+    height: 70%;
+    .mixin-flex(flex, row, center, center);
+    flex-wrap: wrap;
+}
+.box4__box {
+    width: 45%;
+    height: 45%;
+
+    .mixin-flex(flex, column, flex-start, space-around);
+    img {
+        width: 580px;
+    }
+ 
+}
+.box4__box2 {
+    .box4__box;
+    .mixin-flex(flex, column, flex-end, space-around);
+}
+.align-p { //?Правильне вирівнювання тексту
+    width: 100%;
+    height: 60%;
+    margin-top: 15px;
+    .mixin-flex(flex, column, flex-start, space-evenly);
+    h2 {
+        font-size: 24px;
+       
+    }
+     p {
+         font-size: 20px;
+         width: 100%;
+     }
+}
+.align-p2 { //?Правильне вирівнювання тексту
+    .align-p;
+    padding-left: 25px;
+}
